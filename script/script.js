@@ -87,4 +87,62 @@ $(document).ready(function(){
         ]
     });
     $('.who-we-are-slider button').text("");
+
+
+    // Services Section card click 
+
+    // $('.serv-card-main-div').click(function() {
+    //     console.log("Clicked");
+        
+    //     // Apply fadeIn/fadeOut only on the clicked element
+    //     $(this).fadeOut(200, function() {
+    //         $(this).toggleClass("serv-card-active");
+    //         $(this).fadeIn(200);
+    //     });
+    
+    //     // Toggle the .serv-bf-click and .serv-after-click for the clicked element only
+    //     if ($(this).hasClass("serv-card-active")) {
+    //         $(this).find(".serv-bf-click").fadeOut(200);
+    //         $(this).find(".serv-after-click").fadeIn(200);
+    //     } else {
+    //         $(this).find(".serv-bf-click").fadeIn(200);
+    //         $(this).find(".serv-after-click").fadeOut(200);
+    //     }
+    // });
+
+    $('.serv-card-main-div').click(function() {
+        console.log("Clicked");
+
+        let container = $('.services-card-section');
+        let clickedElement = $(this);
+        let scrollPosition = clickedElement.position().left + container.scrollLeft();
+
+        // Adjust for the width of the clicked element
+        let adjustedScrollPosition = scrollPosition - (container.width() - clickedElement.outerWidth()) / 2;
+
+        container.animate({ scrollLeft: adjustedScrollPosition }, 500);
+
+    
+        if ($(this).hasClass("serv-card-active")) {
+            $(this).removeClass("serv-card-active");
+    
+            $(this).find(".serv-bf-click").fadeIn(200);
+            $(this).find(".serv-after-click").fadeOut(200);
+    
+            $(".serv-card-main-div").not(this).removeClass("serv-card-active");
+            $(".serv-bf-click").fadeIn(200);
+            $(".serv-after-click").fadeOut(200);
+        } else {
+            $(".serv-card-main-div").removeClass("serv-card-active");
+            $(".serv-bf-click").fadeIn(200);
+            $(".serv-after-click").fadeOut(200);
+    
+            $(this).addClass("serv-card-active");
+    
+            $(this).find(".serv-bf-click").fadeOut(200);
+            $(this).find(".serv-after-click").fadeIn(200);
+        }
+    });
+    
+    
 });
