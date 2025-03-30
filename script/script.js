@@ -39,4 +39,52 @@ $(document).ready(function(){
             },100)
         }
     );
+
+
+    // who we are section hover class adding 
+    $('.who-we-are-section-learn-btn').hover(
+        function() {
+            $(".who-we-are-section-learn-btn").addClass('animate');
+            setTimeout(function(){
+                $('.who-we-are-section-learn-btn-dark-style').show();
+            },100)
+        },
+        function() { 
+            $(".who-we-are-section-learn-btn").removeClass('animate');
+            setTimeout(function(){
+                $('.who-we-are-section-learn-btn-dark-style').hide();
+            },100)
+        }
+    );
+
+    // who we are section image slider
+    $(".who-we-are-slider").slick({
+        slidesToShow: 3,
+        infinite:true,
+        slidesToScroll: 1,
+        autoplay: false,
+        autoplaySpeed: 2000,
+        dots: false,
+        arrows: true,
+        responsive: [
+            {
+                breakpoint: 769, 
+                settings: {
+                    slidesToShow: 2,   
+                    slidesToScroll: 1, 
+                    infinite: true,         
+                }
+            },
+            {
+                breakpoint: 576, 
+                settings: {
+                    slidesToShow: 1.2,   
+                    slidesToScroll: 1, 
+                    infinite: false,  
+                    autoplay: true,       
+                }
+            },
+        ]
+    });
+    $('.who-we-are-slider button').text("");
 });
