@@ -145,4 +145,38 @@ $(document).ready(function(){
     });
     $('.through-blog-slider-div .slick-prev').text("");
     $('.through-blog-slider-div .slick-next').text("");
+
+
+    // Footer Section connect btn hover 
+    $('.footer-sec-coonect-btn').hover(
+        function() {
+            $(".footer-sec-coonect-btn").addClass('animate');
+            setTimeout(function(){
+                $('.footer-sec-coonect-btn-dark-style').show();
+            },100)
+        },
+        function() { 
+            $(".footer-sec-coonect-btn").removeClass('animate');
+            setTimeout(function(){
+                $('.footer-sec-coonect-btn-dark-style').hide();
+            },100)
+        }
+    );
+
+
+    // Footer nav scroll
+    $('.footer-nav-page-section p').click(function(){
+        // console.log("clicked");
+        let scroll_id = $(this).attr('data-scroll');
+
+        if ($('#' + scroll_id).length) {
+            $('html, body').animate({
+                scrollTop: $('#' + scroll_id).offset().top - 50
+            }, 1000);
+        } else {
+            console.log("Target element not found");
+        }
+    });
+    
+
 });
