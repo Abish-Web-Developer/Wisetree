@@ -90,26 +90,6 @@ $(document).ready(function(){
 
 
     // Services Section card click 
-
-    // $('.serv-card-main-div').click(function() {
-    //     console.log("Clicked");
-        
-    //     // Apply fadeIn/fadeOut only on the clicked element
-    //     $(this).fadeOut(200, function() {
-    //         $(this).toggleClass("serv-card-active");
-    //         $(this).fadeIn(200);
-    //     });
-    
-    //     // Toggle the .serv-bf-click and .serv-after-click for the clicked element only
-    //     if ($(this).hasClass("serv-card-active")) {
-    //         $(this).find(".serv-bf-click").fadeOut(200);
-    //         $(this).find(".serv-after-click").fadeIn(200);
-    //     } else {
-    //         $(this).find(".serv-bf-click").fadeIn(200);
-    //         $(this).find(".serv-after-click").fadeOut(200);
-    //     }
-    // });
-
     $('.serv-card-main-div').click(function() {
         console.log("Clicked");
 
@@ -145,4 +125,24 @@ $(document).ready(function(){
     });
     
     
+    // throughout flow section
+    $(".through-blog-slider-div").slick({
+        slidesToShow: 1,
+        infinite:true,
+        slidesToScroll: 1,
+        autoplay: false,
+        autoplaySpeed: 2000,
+        dots: false,
+        arrows: true,
+        responsive: [
+            {
+                breakpoint: 767, 
+                settings: {
+                    autoplay: true,        
+                }
+            },
+        ]
+    });
+    $('.through-blog-slider-div .slick-prev').text("");
+    $('.through-blog-slider-div .slick-next').text("");
 });
