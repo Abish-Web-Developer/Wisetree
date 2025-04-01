@@ -13,6 +13,122 @@ body{
     margin: 0 20px;
 }
 
+
+/* Navigation  */
+.navigation{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.hamburger{
+    width: fit-content;
+    transform: rotate(180deg);
+}
+.navigation-section{
+    position: fixed;
+    top: 0;
+    z-index: 999;
+    padding: 14px 20px;
+    background-color: #FCFFF9;
+}
+.navigation-section label{
+    display:flex;
+    flex-direction:column;
+    width:70px;
+    cursor:pointer;
+}
+.navigation-section label span{
+    background: #104386;
+    border-radius:10px;
+    height:5px;
+    margin: 5px 0;
+    transition: .4s  cubic-bezier(0.68, -0.6, 0.32, 1.6);
+}
+.navigation-section span:nth-of-type(1){
+    width:90%;
+    background-color: #104386;
+}
+.navigation-section span:nth-of-type(2){
+    width:60%;
+    background-color: #104386;
+}
+.navigation-section span:nth-of-type(3){
+    width:90%;
+}
+.navigation-section input[type="checkbox"]{
+    display:none;
+}
+.navigation-section input[type="checkbox"]:checked ~ span:nth-of-type(1){
+    width: 60%;
+    transform-origin:bottom;
+    transform: rotatez(45deg) translate(10px,9px);
+}
+.navigation-section input[type="checkbox"]:checked ~ span:nth-of-type(2){
+    
+    transform-origin:top;
+    transform:rotatez(-45deg)
+}
+.navigation-section input[type="checkbox"]:checked ~ span:nth-of-type(3){
+    transform-origin:bottom;
+    width:0%;
+    transform: translate(30px,-11px) rotatez(45deg);
+}
+.nav-list{
+    position: absolute;
+    top: 90px;
+    z-index: 999;
+    right: -56%;
+    list-style-type: none;
+    padding: 20px;
+    background-color: #FCFFF9;
+    height: 100vh;
+    width: 50%;
+}
+.nav-list li{
+    color: #104386;
+    font-size: 20px;
+    padding: 10px;
+}
+.nav-list.nav-close{
+    animation: nav-out 0.7s;
+}
+.nav-list.nav-open{
+    animation: nav-in 0.7s;
+}
+.nav-list.nav-open{
+    right: -2px;
+}
+
+@keyframes nav-in{
+    0%{
+        right: -56%;
+    }
+    100%{
+        right: -2px;
+    }
+}
+   
+@keyframes nav-out{
+    0%{
+        right: -2px;
+    }
+    100%{
+        right: -56%;
+    }
+}
+
+@media screen and (min-width:993px) {
+    .navigation-section{
+        display: none;
+    }
+}
+@media screen and (max-width:375px) {
+    .nav-list li{
+        font-size: 16px;
+    }
+}
+   
+
 /* Banner Section  */
 .bnr-section{
     position: relative;
@@ -140,7 +256,34 @@ body{
     background-color: #FCFFF9;
     padding: 14px 41px;
     border-radius: 50px;
-    transition: 0.2s ease-in-out;
+    width: fit-content;
+}
+.bnr-con-logo-div.width-increase{
+    animation: width-increase 0.2s;
+    width: 231px;
+}
+.bnr-con-logo-div.width-reduce{
+    animation: width-reduce 0.2s;
+    width: 126px;
+}
+
+@keyframes width-increase {
+    0%{
+        width: 126px;
+    }
+    100%{
+        width: 231px;
+    }
+    
+}
+@keyframes width-reduce {
+    0%{
+        width: 231px;
+    }
+    100%{
+        width: 126px;
+    }
+    
 }
 .bnr-con-hamburger-div{
     display: none;
@@ -148,6 +291,9 @@ body{
     align-items: center;
     justify-content: center;
     gap: 10px;
+}
+.width-increase .bnr-con-hamburger-div{
+    display: flex;
 }
 .hamburger-icon{
     background-color: #84C08A;
@@ -185,6 +331,7 @@ body{
     height: 65px;
     font-size: 20px;
     font-weight: 400;
+    min-width: max-content;
 }
 .hamburger-icon.active span{
     position: absolute;
@@ -240,9 +387,6 @@ body{
     }
 }
 @media screen and (max-width:992px) {
-    body{
-        background-color: #ffffff;
-    }
     .brand-logo{
         display: none;
     }
@@ -250,6 +394,7 @@ body{
         border-radius: 70px;
         background: url(/images/bnr_bg__mb_image.svg) no-repeat center;
         height: 37rem;
+        margin-top: 110px;
     }
     .bnr-contact-btn-div{
         display: none;
@@ -359,7 +504,7 @@ body{
     margin-top: 6.5rem;
     padding-bottom: 10rem;
     border-radius: 0 0 100px 100px;
-    background-color: white;
+    background-color: #FCFFF9;
     position: relative;
     z-index: 9;
 }
@@ -377,6 +522,11 @@ body{
     max-width: 61rem;
     text-transform: capitalize;
     padding: 3rem 0;
+}
+.unique-section-sub-title span{
+    background: -webkit-linear-gradient(1deg,#104386 -17%, white 174%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
 }
 .unique-section-cnt-div p{
     font-size: 18px;
@@ -622,6 +772,16 @@ body{
     font-weight: 600;
     text-transform: capitalize;
 }
+.who-we-are-cnt-title span:nth-child(2){
+    background: -webkit-linear-gradient(1deg,#FCFFF9D9 79%, #03232A 177%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+.who-we-are-cnt-title span:nth-child(4){
+    background: -webkit-linear-gradient(1deg,#FCFFF9D9 9%, #03232A 177%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
 .who-we-sec-col2{
     display: flex;
     align-items: flex-start;
@@ -758,6 +918,11 @@ body{
     text-transform: capitalize;
     max-width: 84rem;
     padding-bottom: 4rem;
+}
+.serv-sub-title span{
+    background: -webkit-linear-gradient(1deg,#104386 -17%, white 174%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
 }
 .serv-card-main-div{
     padding: 30px;

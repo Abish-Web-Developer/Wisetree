@@ -1,17 +1,48 @@
 
 $(document).ready(function(){
 
+    // Navigation 
+    $('.navigation').click(function() {
+        if ($('#check').prop('checked')) {
+            $('.nav-list').addClass('nav-open').removeClass('nav-close');
+        } else {
+            $('.nav-list').removeClass('nav-open').addClass('nav-close');
+        }
+    });
+
+    // Navigation click and scroll 
+    $('.nav-list li').click(function(){
+        // console.log("clicked");
+        let scroll_id = $(this).attr('data-scroll');
+
+        if ($('#' + scroll_id).length) {
+            $('html, body').animate({
+                scrollTop: $('#' + scroll_id).offset().top - 50
+            }, 1000);
+            $('#check').prop('checked', false);
+        } else {
+            console.log("Target element not found");
+        }
+    });
+
+
     // Banner btn hover class adding 
     $('.bnr-con-logo-div').hover(
         function() {
+            $(this).addClass('width-increase');
+            $(this).removeClass('width-reduce');
             $('.bnr-con-logo').hide();
-            $('.bnr-con-hamburger-div').css('display','flex');
+            $('.hamburger-icon').fadeIn(300);
+            $('.contact-btn').fadeIn(300);
             $('.bnr-con-logo-div').css('padding', '11px 11px');
         },
         function() { 
-            $('.bnr-con-hamburger-div').hide();
+            $(this).removeClass('width-increase');
+            $(this).addClass('width-reduce');
+            $('.hamburger-icon').fadeOut(300);
+            $('.contact-btn').fadeOut(300);
             $('.bnr-con-logo-div').css('padding', '14px 40px');
-            $('.bnr-con-logo').show();
+            $('.bnr-con-logo').fadeIn();
             $(".hamburger-icon").removeClass('active');
         }
     );
@@ -25,37 +56,47 @@ $(document).ready(function(){
 
 
     // Unique section hover class adding 
-    $('.unique-sec-learn-btn').hover(
-        function() {
-            $(".unique-sec-learn-btn").addClass('animate');
-            setTimeout(function(){
-                $('.learn-btn-dark-style').show();
-            },100)
-        },
-        function() { 
-            $(".unique-sec-learn-btn").removeClass('animate');
-            setTimeout(function(){
-                $('.learn-btn-dark-style').hide();
-            },100)
-        }
-    );
+    if ($(window).width() <= 767) {
+        $(".unique-sec-learn-btn").addClass('animate');
+        $('.learn-btn-dark-style').show();
+    }else{
+        $('.unique-sec-learn-btn').hover(
+            function() {
+                $(".unique-sec-learn-btn").addClass('animate');
+                setTimeout(function(){
+                    $('.learn-btn-dark-style').show();
+                },100)
+            },
+            function() { 
+                $(".unique-sec-learn-btn").removeClass('animate');
+                setTimeout(function(){
+                    $('.learn-btn-dark-style').hide();
+                },100)
+            }
+        );
+    }
 
-
+   
     // who we are section hover class adding 
-    $('.who-we-are-section-learn-btn').hover(
-        function() {
-            $(".who-we-are-section-learn-btn").addClass('animate');
-            setTimeout(function(){
-                $('.who-we-are-section-learn-btn-dark-style').show();
-            },100)
-        },
-        function() { 
-            $(".who-we-are-section-learn-btn").removeClass('animate');
-            setTimeout(function(){
-                $('.who-we-are-section-learn-btn-dark-style').hide();
-            },100)
-        }
-    );
+    if ($(window).width() <= 767){
+        $(".who-we-are-section-learn-btn").addClass('animate');
+        $('.who-we-are-section-learn-btn-dark-style').show();
+    }else{
+        $('.who-we-are-section-learn-btn').hover(
+            function() {
+                $(".who-we-are-section-learn-btn").addClass('animate');
+                setTimeout(function(){
+                    $('.who-we-are-section-learn-btn-dark-style').show();
+                },100)
+            },
+            function() { 
+                $(".who-we-are-section-learn-btn").removeClass('animate');
+                setTimeout(function(){
+                    $('.who-we-are-section-learn-btn-dark-style').hide();
+                },100)
+            }
+        );
+    }
 
     // who we are section image slider
     $(".who-we-are-slider").slick({
@@ -148,20 +189,25 @@ $(document).ready(function(){
 
 
     // Footer Section connect btn hover 
-    $('.footer-sec-coonect-btn').hover(
-        function() {
-            $(".footer-sec-coonect-btn").addClass('animate');
-            setTimeout(function(){
-                $('.footer-sec-coonect-btn-dark-style').show();
-            },100)
-        },
-        function() { 
-            $(".footer-sec-coonect-btn").removeClass('animate');
-            setTimeout(function(){
-                $('.footer-sec-coonect-btn-dark-style').hide();
-            },100)
-        }
-    );
+    if ($(window).width() <= 767){
+        $(".footer-sec-coonect-btn").addClass('animate');
+        $('.footer-sec-coonect-btn-dark-style').show();
+    }else{
+        $('.footer-sec-coonect-btn').hover(
+            function() {
+                $(".footer-sec-coonect-btn").addClass('animate');
+                setTimeout(function(){
+                    $('.footer-sec-coonect-btn-dark-style').show();
+                },100)
+            },
+            function() { 
+                $(".footer-sec-coonect-btn").removeClass('animate');
+                setTimeout(function(){
+                    $('.footer-sec-coonect-btn-dark-style').hide();
+                },100)
+            }
+        );
+    }
 
 
     // Footer nav scroll
