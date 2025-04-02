@@ -227,3 +227,105 @@ $(document).ready(function(){
     
 
 });
+
+// Who we are section bottom slider 
+document.addEventListener("DOMContentLoaded", function () {
+    const slides = document.querySelectorAll(".looking-at-slide");
+    const nextBtn = document.querySelector(".looking-slider-next");
+    const prevBtn = document.querySelector(".looking-slider-prev");
+
+    let states = [];
+
+    function updateStates() {
+        if (window.innerWidth <= 320) {
+            states = [
+                { left: "0px", top: "0px", scale: 1, zIndex: 3 },
+                { left: "131px", top: "9px", scale: 0.6, zIndex: 2 },
+                { left: "73px", top: "55px", scale: 0.3, zIndex: 1 },
+                { left: "27px", top: "71px", scale: 0.2, zIndex: 0 }
+            ];
+        } else if (window.innerWidth <= 400) {
+            states = [
+                { left: "0px", top: "0px", scale: 1, zIndex: 3 },
+                { left: "172px", top: "13px", scale: 0.6, zIndex: 2 },
+                { left: "92px", top: "63px", scale: 0.3, zIndex: 1 },
+                { left: "35px", top: "82px", scale: 0.2, zIndex: 0 }
+            ];
+        } else if (window.innerWidth <= 560) {
+            states = [
+                { left: "0px", top: "0px", scale: 1, zIndex: 3 },
+                { left: "209px", top: "13px", scale: 0.6, zIndex: 2 },
+                { left: "112px", top: "71px", scale: 0.3, zIndex: 1 },
+                { left: "41px", top: "92px", scale: 0.2, zIndex: 0 }
+            ];
+        } else if (window.innerWidth <= 740) {
+            states = [
+                { left: "0px", top: "0px", scale: 1, zIndex: 3 },
+                { left: "289px", top: "27px", scale: 0.6, zIndex: 2 },
+                { left: "144px", top: "115px", scale: 0.3, zIndex: 1 },
+                { left: "47px", top: "137px", scale: 0.2, zIndex: 0 }
+            ];
+        } else if (window.innerWidth <= 900) {
+            states = [
+                { left: "0px", top: "0px", scale: 1, zIndex: 3 },
+                { left: "388px", top: "37px", scale: 0.6, zIndex: 2 },
+                { left: "199px", top: "159px", scale: 0.3, zIndex: 1 },
+                { left: "56px", top: "189px", scale: 0.2, zIndex: 0 }
+            ];
+        } else if (window.innerWidth <= 1366) {
+            states = [
+                { left: "0px", top: "0px", scale: 1, zIndex: 3 },
+                { left: "466px", top: "37px", scale: 0.6, zIndex: 2 },
+                { left: "233px", top: "192px", scale: 0.3, zIndex: 1 },
+                { left: "61px", top: "230px", scale: 0.2, zIndex: 0 }
+            ];
+        } else {
+            states = [
+                { left: "0px", top: "0px", scale: 1, zIndex: 3 },
+                { left: "714px", top: "42px", scale: 0.6, zIndex: 2 },
+                { left: "390px", top: "267px", scale: 0.3, zIndex: 1 },
+                { left: "121px", top: "317px", scale: 0.2, zIndex: 0 }
+            ];
+        }
+        updateSlides();
+    }
+
+    function updateSlides() {
+        slides.forEach((slide, index) => {
+            if (states[index]) {
+                slide.style.left = states[index].left;
+                slide.style.top = states[index].top;
+                slide.style.transform = `scale(${states[index].scale})`;
+                slide.style.zIndex = states[index].zIndex;
+            }
+        });
+
+        slides.forEach(slide => slide.classList.remove("active-slide"));
+
+        const activeIndex = states.findIndex(state => state.left === "0px" && state.top === "0px" && state.scale === 1 && state.zIndex === 3);
+        if (activeIndex !== -1) {
+            slides[activeIndex].classList.add("active-slide");
+        }
+    }
+
+    nextBtn.addEventListener("click", function () {
+        states.unshift(states.pop());
+        updateSlides();
+    });
+
+    prevBtn.addEventListener("click", function () {
+        states.push(states.shift());
+        updateSlides();
+    });
+
+    window.addEventListener("resize", updateStates);
+
+    updateStates();
+
+    // Click event for auto scroll
+    const Autobutton = document.getElementById("looking-slider-next");
+    function triggerClick() {
+        Autobutton.click();
+    }
+    setInterval(triggerClick, 2500);
+});

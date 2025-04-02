@@ -2,8 +2,11 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
+    <meta name="description" content="We are the B2B branding experts who create long-term value for brands, which ultimately translates into deeper connections with Prospects and Clients. Our sustainable, integrated marketing, communication, and partnership strategies drive substantial ROI growth and significantly enhance trust and client loyalty, which are critical for long-term business relationships and sustained success​. As a B2B Brand and Marketing Consulting Firm we are at the forefront of redefining success metrics that we achieve through consistent, and customised engineered efforts">
+    <meta name="keywords" content="Wisetree, B2B branding, integrated marketing, communication, partnership strategies, ROI growth, engineered efforts, long-term business relationships, Buyer's Trust">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Wisetree</title>
+    <link rel="icon" type="image/svg" href="images/favicon.svg">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
@@ -156,37 +159,37 @@
                 </div>
                 <div class="looking-at-slide">
                     <div class="looking-slide-left-div">
-                        <p class="looking-slid-bg">A</p>
+                        <p class="looking-slid-bg">E</p>
                         <p class="looking-slid-count">2</p>
                     </div>
                     <div class="looking-slide-right-div">
-                        <p class="looking-slide-right-title">Gain</p>
-                        <p class="looking-slide-right-cnt">Gain Buyer's Trust</p>
+                        <p class="looking-slide-right-title">enhance</p>
+                        <p class="looking-slide-right-cnt">Enhance sales quota attainment</p>
+                    </div>
+                </div>
+                <div class="looking-at-slide">
+                    <div class="looking-slide-left-div">
+                        <p class="looking-slid-bg">G</p>
+                        <p class="looking-slid-count">3</p>
+                    </div>
+                    <div class="looking-slide-right-div">
+                        <p class="looking-slide-right-title">generate</p>
+                        <p class="looking-slide-right-cnt">generate demand</p>
                     </div>
                 </div>
                 <div class="looking-at-slide">
                     <div class="looking-slide-left-div">
                         <p class="looking-slid-bg">B</p>
-                        <p class="looking-slid-count">3</p>
-                    </div>
-                    <div class="looking-slide-right-div">
-                        <p class="looking-slide-right-title">Gain</p>
-                        <p class="looking-slide-right-cnt">Gain Buyer's Trust</p>
-                    </div>
-                </div>
-                <div class="looking-at-slide">
-                    <div class="looking-slide-left-div">
-                        <p class="looking-slid-bg">C</p>
                         <p class="looking-slid-count">4</p>
                     </div>
                     <div class="looking-slide-right-div">
-                        <p class="looking-slide-right-title">Gain</p>
-                        <p class="looking-slide-right-cnt">Gain Buyer's Trust</p>
+                        <p class="looking-slide-right-title">build</p>
+                        <p class="looking-slide-right-cnt">build a distintive brand</p>
                     </div>
                 </div>
             </div>
             <button class="looking-slider-prev">previous</button>
-            <button class="looking-slider-next">next</button>
+            <button class="looking-slider-next" id="looking-slider-next">next</button>
         </div>
         <div class="services-main-title">
             <p class="container-fluid">Services</p>
@@ -410,101 +413,5 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js" integrity="sha512-v2CJ7UaYy4JwqLDIrZUI/4hqeoQieOmAZNXBeQyjo21dadnwR+8ZaIJVT8EE2iyI61OV8e6M8PP2/4hpQINQ/g==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
     <script src="https://cdn.jsdelivr.net/jquery.slick/1.4.1/slick.min.js"></script>
     <script src="script/script.js"></script>
-    <script>
-        document.addEventListener("DOMContentLoaded", function () {
-            const slides = document.querySelectorAll(".looking-at-slide");
-            const nextBtn = document.querySelector(".looking-slider-next");
-            const prevBtn = document.querySelector(".looking-slider-prev");
-
-            let states = [];
-
-            function updateStates() {
-                if (window.innerWidth <= 320) {
-                    states = [
-                        { left: "0px", top: "0px", scale: 1, zIndex: 3 },
-                        { left: "131px", top: "9px", scale: 0.6, zIndex: 2 },
-                        { left: "73px", top: "55px", scale: 0.3, zIndex: 1 },
-                        { left: "27px", top: "71px", scale: 0.2, zIndex: 0 }
-                    ];
-                } else if (window.innerWidth <= 400) {
-                    states = [
-                        { left: "0px", top: "0px", scale: 1, zIndex: 3 },
-                        { left: "172px", top: "13px", scale: 0.6, zIndex: 2 },
-                        { left: "92px", top: "63px", scale: 0.3, zIndex: 1 },
-                        { left: "35px", top: "82px", scale: 0.2, zIndex: 0 }
-                    ];
-                } else if (window.innerWidth <= 560) {
-                    states = [
-                        { left: "0px", top: "0px", scale: 1, zIndex: 3 },
-                        { left: "209px", top: "13px", scale: 0.6, zIndex: 2 },
-                        { left: "112px", top: "71px", scale: 0.3, zIndex: 1 },
-                        { left: "41px", top: "92px", scale: 0.2, zIndex: 0 }
-                    ];
-                } else if (window.innerWidth <= 740) {
-                    states = [
-                        { left: "0px", top: "0px", scale: 1, zIndex: 3 },
-                        { left: "289px", top: "27px", scale: 0.6, zIndex: 2 },
-                        { left: "144px", top: "115px", scale: 0.3, zIndex: 1 },
-                        { left: "47px", top: "137px", scale: 0.2, zIndex: 0 }
-                    ];
-                } else if (window.innerWidth <= 900) {
-                    states = [
-                        { left: "0px", top: "0px", scale: 1, zIndex: 3 },
-                        { left: "388px", top: "37px", scale: 0.6, zIndex: 2 },
-                        { left: "199px", top: "159px", scale: 0.3, zIndex: 1 },
-                        { left: "56px", top: "189px", scale: 0.2, zIndex: 0 }
-                    ];
-                } else if (window.innerWidth <= 1366) {
-                    states = [
-                        { left: "0px", top: "0px", scale: 1, zIndex: 3 },
-                        { left: "466px", top: "37px", scale: 0.6, zIndex: 2 },
-                        { left: "233px", top: "192px", scale: 0.3, zIndex: 1 },
-                        { left: "61px", top: "230px", scale: 0.2, zIndex: 0 }
-                    ];
-                } else {
-                    states = [
-                        { left: "0px", top: "0px", scale: 1, zIndex: 3 },
-                        { left: "714px", top: "42px", scale: 0.6, zIndex: 2 },
-                        { left: "390px", top: "267px", scale: 0.3, zIndex: 1 },
-                        { left: "121px", top: "317px", scale: 0.2, zIndex: 0 }
-                    ];
-                }
-                updateSlides();
-            }
-
-            function updateSlides() {
-                slides.forEach((slide, index) => {
-                    if (states[index]) {
-                        slide.style.left = states[index].left;
-                        slide.style.top = states[index].top;
-                        slide.style.transform = `scale(${states[index].scale})`;
-                        slide.style.zIndex = states[index].zIndex;
-                    }
-                });
-
-                slides.forEach(slide => slide.classList.remove("active-slide"));
-
-                const activeIndex = states.findIndex(state => state.left === "0px" && state.top === "0px" && state.scale === 1 && state.zIndex === 3);
-                if (activeIndex !== -1) {
-                    slides[activeIndex].classList.add("active-slide");
-                }
-            }
-
-            nextBtn.addEventListener("click", function () {
-                states.unshift(states.pop());
-                updateSlides();
-            });
-
-            prevBtn.addEventListener("click", function () {
-                states.push(states.shift());
-                updateSlides();
-            });
-
-            window.addEventListener("resize", updateStates);
-
-            updateStates();
-        });
-
-    </script>
 </body>
 </html>

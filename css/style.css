@@ -135,7 +135,7 @@ body{
 /* Banner Section  */
 .bnr-section{
     position: relative;
-    background: url(/images/bnr_bg_image.svg) no-repeat center;
+    background: url(../images/bnr_bg_image.svg) no-repeat center;
     width: 100%;
     height: 52rem;
     background-size: cover;
@@ -169,11 +169,11 @@ body{
 }
 .scr-l-to-r{
     transform: translateX(40%);
-    animation: scroll-to-left 10s infinite;
+    animation: scroll-to-left 11s infinite;
 }
 .scr-r-to-l{
     transform: translateX(-48%);
-    animation: scroll-to-right 10s infinite;
+    animation: scroll-to-right 11s infinite;
 }
 @keyframes scroll-to-left{
     0%{
@@ -395,7 +395,7 @@ body{
     }
     .bnr-section{
         border-radius: 70px;
-        background: url(/images/bnr_bg__mb_image.svg) no-repeat center;
+        background: url(../images/bnr_bg__mb_image.svg) no-repeat center;
         height: 37rem;
         margin-top: 110px;
     }
@@ -429,6 +429,12 @@ body{
     }
     .bnr-content-txt{
         font-size: 19px;
+    }
+    .scr-l-to-r{
+        animation: scroll-to-left 15s infinite;
+    }
+    .scr-r-to-l{
+        animation: scroll-to-right 15s infinite;
     }
 }
 @media screen and (max-width:575px) {
@@ -752,7 +758,7 @@ body{
     justify-content: flex-start;
 }
 .who-we-are-section{
-    background: url(/images/who_we_are_bg.svg) no-repeat center;
+    background: url(../images/who_we_are_bg.svg) no-repeat center;
     background-size: cover;
     padding-top: 16rem;
     padding-bottom: 6rem;
@@ -815,10 +821,15 @@ body{
 .who-we-are-slider button.slick-next{
     width: 30px;
     height: 30px;
-    background: url(/images/who_we_slider_right_arrow.png) no-repeat center;
+    background: url(../images/who_we_slider_right_arrow.png) no-repeat center;
     position: absolute;
     right: 29px;
     bottom: -10px;
+}
+.looking-slider-prev, .looking-slider-next{
+    position: absolute;
+    top: 0;
+    visibility: hidden;
 }
 .looking-at-title{
     margin: 0 auto;
@@ -846,13 +857,14 @@ body{
     justify-content: center;
     color: white;
     border-radius: 10px;
-    background: url(/images/loking-at-slider-bg.svg) no-repeat;
+    background: url(../images/loking-at-slider-bg.svg) no-repeat;
     background-size: cover;
     padding: 8rem 6rem;
     border-radius: 75px;
     overflow: hidden;
     filter: blur(3px);
-    /* width: 772px; */
+    width: 772px;
+    max-height: 460px;
 }
 .looking-at-slide.active-slide{
     filter: blur(0px);
@@ -862,10 +874,12 @@ body{
 }
 .looking-slide-right-title{
     font-size: 86px;
+    text-transform: uppercase;
 }
 .looking-slide-right-cnt{
     font-size: 43px;
-    min-width: max-content;
+    text-transform: capitalize;
+    min-width: auto;
 }
 .looking-slid-bg{
     font-size: 258px;
@@ -893,7 +907,8 @@ body{
     .looking-at-slide{
         padding: 5rem 2rem;
         border-radius: 50px;
-        /* width: 513px; */
+        width: 513px;
+        max-height: 327px;
     }
     .looking-slide-right-title {
         font-size: 60px;
@@ -952,7 +967,8 @@ body{
     .looking-at-slide {
         padding: 3rem 2rem;
         border-radius: 38px;
-        /* width: 416px; */
+        width: 416px;
+        max-height: 263px;
     }
     .looking-at-us-slider {
         width: 44rem;
@@ -986,7 +1002,8 @@ body{
     .looking-at-slide {
         padding: 2rem 2rem;
         border-radius: 38px;
-        /* width: 304px; */
+        width: 304px;
+        max-height: 194px;
     }
     .looking-at-us-slider {
         width: 33rem;
@@ -1006,7 +1023,7 @@ body{
         padding: 0 10px;
     }
     .who-we-are-section{
-        background: url(/images/who_we_are_bg_mb.svg) no-repeat center;
+        background: url(../images/who_we_are_bg_mb.svg) no-repeat center;
         background-size: cover;
     }
     .who-we-are-section-learn-btn p{
@@ -1027,7 +1044,7 @@ body{
         right: 1%;
     }
     .looking-at-title {
-        margin-bottom: -3.2rem;
+        margin-bottom: -3.1rem;
         margin-top: -3rem;
     }
     .looking-at-dt{
@@ -1060,7 +1077,8 @@ body{
     .looking-at-slide{
         padding: 1rem 1rem;
         border-radius: 29px;
-        /* width: 219px; */
+        width: 219px;
+        max-height: 132px;
     }
     .looking-at-us-slider {
         margin-top: 0;
@@ -1138,7 +1156,7 @@ body{
 
 /* Services Section */
 .services-main-title{
-    background: url(/images/dot_grid.svg) no-repeat;
+    background: url(../images/dot_grid.svg) no-repeat;
     background-size: cover;
 }
 .services-main-title p{
@@ -1175,10 +1193,10 @@ body{
     cursor: pointer;
 }
 .serv-card-main-div:nth-child(odd){
-    background: url(/images/serv_card_bg_1.svg) no-repeat;
+    background: url(../images/serv_card_bg_1.svg) no-repeat;
 }
 .serv-card-main-div:nth-child(even){
-    background: url(/images/serv_card_bg_2.svg) no-repeat;
+    background: url(../images/serv_card_bg_2.svg) no-repeat;
 }
 .serv-card-count-div{
     position: absolute;
@@ -1186,7 +1204,7 @@ body{
     right: 0;
     width: 96px;
     height: 96px;
-    background: url(/images/serv_count_bg_1.svg) no-repeat;
+    background: url(../images/serv_count_bg_1.svg) no-repeat;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -1278,14 +1296,14 @@ body{
     overflow-x: scroll;
 }
 .serv-mb-reverse:nth-child(odd) {
-    background: url(/images/serv_rev_mb1.svg) no-repeat;
+    background: url(../images/serv_rev_mb1.svg) no-repeat;
 }
 
 .serv-mb-reverse:nth-child(even) {
-    background: url(/images/serv_rev_mb2.svg) no-repeat;
+    background: url(../images/serv_rev_mb2.svg) no-repeat;
 }
 .serv-mb-reverse:nth-child(2) {
-    background: url(/images/serv_rev_mb3.png) no-repeat;
+    background: url(../images/serv_rev_mb3.png) no-repeat;
 }
 .serv-mb-reverse .serv-bf-click{
     flex-direction: column-reverse;
@@ -1297,7 +1315,7 @@ body{
 .serv-card-main-div.serv-card-active{
     width: 100%;
     min-width: 677px;
-    background: url(/images/serv_count_bg_1_after.svg) no-repeat;
+    background: url(../images/serv_count_bg_1_after.svg) no-repeat;
     animation: width-change-animation 1s;
 }
 .services-card-section::-webkit-scrollbar {
@@ -1328,7 +1346,7 @@ body{
     .serv-card-main-div.serv-card-active{
         min-width: unset;
         height: auto;
-        background: url(/images/serv_count_bg_1_after.png) no-repeat;
+        background: url(../images/serv_count_bg_1_after.png) no-repeat;
         background-size: cover !important;
     }
     .serv-af-head-section {        
@@ -1476,7 +1494,7 @@ body{
 .through-blog-slider-div .slick-next{
     width: 42px;
     height: 42px;
-    background: url(/images/who_we_slider_right_arrow.png) no-repeat center;
+    background: url(../images/who_we_slider_right_arrow.png) no-repeat center;
     position: sticky;
     left: 95%;
     bottom: 8rem;
@@ -1545,7 +1563,7 @@ body{
 
 /* Footer Section */
 .footer-section{
-    background: url(/images/who_we_are_bg.svg) no-repeat center;
+    background: url(../images/who_we_are_bg.svg) no-repeat center;
     background-size: cover;
     padding-top: 16rem;
     position: relative;
@@ -1553,7 +1571,7 @@ body{
     z-index: 8;
 }
 .footer-sec-contact-section{
-    background: url(/images/footer_dot_grid.svg) no-repeat;
+    background: url(../images/footer_dot_grid.svg) no-repeat;
     background-size: cover;
     padding: 50px 0;
 }
