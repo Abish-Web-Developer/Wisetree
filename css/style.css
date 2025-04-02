@@ -145,6 +145,12 @@ body{
     .navigation-section label span{
         height: 3px;
     }
+    .navigation-section input[type="checkbox"]:checked ~ span:nth-of-type(1){
+        transform: rotatez(45deg) translate(8px, 6px);
+    }
+    .nav-list{
+        top: 63px;
+    }
 }
 @media screen and (max-width:375px) {
     .nav-list li{
@@ -152,6 +158,21 @@ body{
     }
     .navigation-section{
         padding: 14px 20px !important;
+    }
+    .navigation-section span:nth-of-type(3) {
+        width: 60%;
+    }
+    .navigation-section span:nth-of-type(2) {
+        width: 40%;
+    }
+    .navigation-section span:nth-of-type(1) {
+        width: 60%;
+    }
+    .navigation-section label span{
+        height: 3px;
+    }
+    .navigation-section input[type="checkbox"]:checked ~ span:nth-of-type(1){
+        transform: rotatez(45deg) translate(8px, 6px);
     }
 }
    
@@ -489,6 +510,7 @@ body{
     .bnr-section{
         height: 35rem;
         border-radius: 58px;
+        margin-top: 88px;
     }
     .bnr-content-txt {
         font-size: 16px;
@@ -902,7 +924,7 @@ body{
     padding: 8rem 6rem;
     border-radius: 75px;
     overflow: hidden;
-    filter: blur(3px);
+    filter: blur(5px);
     width: 772px;
     max-height: 460px;
 }
@@ -1120,6 +1142,7 @@ body{
         border-radius: 29px;
         width: 219px;
         max-height: 132px;
+        filter: blur(2px);
     }
     .looking-at-us-slider {
         margin-top: 0;
