@@ -84,7 +84,7 @@ body{
     padding: 20px;
     background-color: #FCFFF9;
     height: 100vh;
-    width: 75%;
+    width: 50%;
 }
 .nav-list li{
     color: #104386;
@@ -126,7 +126,7 @@ body{
 }
 @media screen and (max-width:992px) {
     .nav-menu-logo{
-        width: 43%;   
+        width: 21%;   
     }
 }
 @media screen and (max-width:575px) {
@@ -150,6 +150,7 @@ body{
     }
     .nav-list{
         top: 63px;
+        width: 75%;
     }
 }
 @media screen and (max-width:375px) {
@@ -169,10 +170,11 @@ body{
         width: 60%;
     }
     .navigation-section label span{
-        height: 3px;
+        height: 2px;
+        margin: 3px 0;
     }
     .navigation-section input[type="checkbox"]:checked ~ span:nth-of-type(1){
-        transform: rotatez(45deg) translate(8px, 6px);
+        transform: rotatez(45deg) translate(4px, 2px);
     }
 }
    
@@ -509,7 +511,7 @@ body{
     }
     .bnr-section{
         height: 35rem;
-        border-radius: 58px;
+        border-radius: 43px;
         margin-top: 88px;
     }
     .bnr-content-txt {
@@ -538,6 +540,7 @@ body{
     }
     .bnr-section {
         height: 30rem;
+        margin-top: 78px;
     }
     .bnr-bg-spring.sp-right {
         top: 23%;
