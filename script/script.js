@@ -76,7 +76,8 @@ $(document).ready(function(){
         );
     }
 
-   
+    // Who we are section slider 
+
     // who we are section hover class adding 
     if ($(window).width() <= 767){
         $(".who-we-are-section-learn-btn").addClass('animate');

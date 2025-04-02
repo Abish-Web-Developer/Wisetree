@@ -126,6 +126,9 @@ body{
     .nav-list li{
         font-size: 16px;
     }
+    .navigation-section{
+        padding: 14px 20px !important;
+    }
 }
    
 
@@ -166,11 +169,11 @@ body{
 }
 .scr-l-to-r{
     transform: translateX(40%);
-    animation: scroll-to-left1 10s infinite;
+    animation: scroll-to-left 10s infinite;
 }
 .scr-r-to-l{
     transform: translateX(-48%);
-    animation: scroll-to-right1 10s infinite;
+    animation: scroll-to-right 10s infinite;
 }
 @keyframes scroll-to-left{
     0%{
@@ -817,11 +820,97 @@ body{
     right: 29px;
     bottom: -10px;
 }
+.looking-at-title{
+    margin: 0 auto;
+    text-align: center;
+    margin-bottom: -5.3rem;
+    text-transform: none;
+}
+.looking-at-title span{
+    background:-webkit-linear-gradient(1deg,#104386 22%, white 174%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+.looking-at-us-slider {
+    position: relative;
+    width: 82rem;
+    margin: 0 auto;
+    height: 43rem;
+}
+
+.looking-at-slide {
+    position: absolute;
+    transition: all 0.5s ease-in-out;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    border-radius: 10px;
+    background: url(/images/loking-at-slider-bg.svg) no-repeat;
+    background-size: cover;
+    padding: 8rem 6rem;
+    border-radius: 75px;
+    overflow: hidden;
+    filter: blur(3px);
+    /* width: 772px; */
+}
+.looking-at-slide.active-slide{
+    filter: blur(0px);
+}
+.looking-slide-left-div{
+    position: relative;
+}
+.looking-slide-right-title{
+    font-size: 86px;
+}
+.looking-slide-right-cnt{
+    font-size: 43px;
+    min-width: max-content;
+}
+.looking-slid-bg{
+    font-size: 258px;
+    line-height: 204px;
+    opacity: 0.1;
+}
+.looking-slid-count{
+    font-size: 183px;
+    line-height: 204px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+.looking-at-slider-section button{
+    position: relative;
+    bottom: -27rem;
+}
 
 
 @media screen and (max-width:1366px) {
     .who-we-are-section-learn-btn p{
         font-size: 21px;
+    }
+    .looking-at-slide{
+        padding: 5rem 2rem;
+        border-radius: 50px;
+        /* width: 513px; */
+    }
+    .looking-slide-right-title {
+        font-size: 60px;
+    }
+    .looking-slide-right-cnt {
+        font-size: 35px;
+    }
+    .looking-slid-bg {
+        font-size: 181px;
+        line-height: 167px;
+    }
+    .looking-slid-count {
+        font-size: 131px;
+    }
+    .looking-at-us-slider{
+        width: 54rem;
+        height: 33rem;
     }
 }
 @media screen and (max-width:1280px) {
@@ -847,11 +936,66 @@ body{
         padding-bottom: 1rem;
     }
 }
+@media screen and (max-width:992px) {
+    .looking-at-title{
+        margin-bottom: -4.8rem;
+        padding-top: 0;
+    }
+}
+@media screen and (max-width:900px) {
+    .looking-slide-right-title {
+        font-size: 46px;
+    }
+    .looking-slide-right-cnt {
+        font-size: 24px;
+    }
+    .looking-at-slide {
+        padding: 3rem 2rem;
+        border-radius: 38px;
+        /* width: 416px; */
+    }
+    .looking-at-us-slider {
+        width: 44rem;
+        height: 26rem;
+    }
+}
 @media screen and (max-width:768px) {
     .who-we-are-section{
         padding-top: 12rem;
         border-radius: 0 0 70px 70px;
         padding-bottom: 4rem;
+    }
+    .looking-at-title {
+        margin-bottom: -4rem;
+    }
+}
+@media screen and (max-width:740px) {
+    .looking-slid-bg {
+        font-size: 128px;
+        line-height: 130px;
+    }
+    .looking-slid-count {
+        font-size: 83px;
+    }
+    .looking-slide-right-title {
+        font-size: 34px;
+    }
+    .looking-slide-right-cnt {
+        font-size: 16px;
+    }
+    .looking-at-slide {
+        padding: 2rem 2rem;
+        border-radius: 38px;
+        /* width: 304px; */
+    }
+    .looking-at-us-slider {
+        width: 33rem;
+        height: 18rem;
+    }
+}
+@media screen and (min-width:576px) {
+    .looking-at-mb{
+        display: none;
     }
 }
 @media screen and (max-width:575px) {
@@ -882,6 +1026,13 @@ body{
     .who-we-are-section-learn-btn.animate div{
         right: 1%;
     }
+    .looking-at-title {
+        margin-bottom: -3.2rem;
+        margin-top: -3rem;
+    }
+    .looking-at-dt{
+        display: none;
+    }
     @keyframes gradient-animation-in{
         0%{
             right: 36%;
@@ -891,9 +1042,97 @@ body{
         }
     }
 }
+@media screen and (max-width:560px) {
+    .looking-slid-count {
+        font-size: 58px;
+        line-height: normal;
+    }
+    .looking-slid-bg {
+        font-size: 105px;
+        line-height: 100px;
+    }
+    .looking-slide-right-title {
+        font-size: 28px;
+    }
+    .looking-slide-right-cnt {
+        font-size: 12px;
+    }
+    .looking-at-slide{
+        padding: 1rem 1rem;
+        border-radius: 29px;
+        /* width: 219px; */
+    }
+    .looking-at-us-slider {
+        margin-top: 0;
+        width: 24rem;
+        height: 13rem;
+    }
+    .looking-at-slider-section.container-fluid{
+        padding: 0px 10px;
+    }
+}
+@media screen and (max-width:425px) {
+    .looking-at-title {
+        font-size: 41px;
+        line-height: 45px;
+    }
+}
+@media screen and (max-width:400px) {
+    .looking-slid-bg {
+        font-size: 71px;
+        line-height: 81px;
+    }
+    .looking-slid-count {
+        font-size: 45px;
+    }
+    .looking-slide-right-title {
+        font-size: 20px;
+    }
+    .looking-slide-right-cnt {
+        font-size: 10px;
+    }
+    .looking-at-slide {
+        border-radius: 20px;
+        width: 175px;
+    }
+    .looking-at-us-slider{
+        width: 19rem;
+        height: 13rem;
+        margin-bottom: -3rem;
+    }
+}
+@media screen and (max-width:355px) {
+    .looking-at-title {
+        font-size: 32px;
+        line-height: 33px;
+        margin-bottom: -2.7rem;
+    }
+}
 @media screen and (max-width:375px) {
     .who-we-are-section{
         border-radius: 0 0 40px 40px;
+    }
+}
+@media screen and (max-width:320px) {
+    .looking-slid-bg {
+        font-size: 50px;
+        line-height: 46px;
+    }
+    .looking-slid-count {
+        font-size: 32px;
+    }
+    .looking-slide-right-title {
+        font-size: 17px;
+    }
+    .looking-slide-right-cnt {
+        font-size: 9px;
+    }
+    .looking-at-us-slider {
+        width: 15rem;
+    }
+    .looking-at-slide {
+        border-radius: 11px;
+        width: 137px;
     }
 }
 
