@@ -1465,6 +1465,7 @@ body{
 .through-blog-col-sec2{
     align-items: center;
     gap: 3rem;
+    background-color: #fcfff9;
 }
 .blog-head-sec span{
     padding: 0 20px;

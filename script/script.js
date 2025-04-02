@@ -176,6 +176,7 @@ $(document).ready(function(){
         autoplaySpeed: 2000,
         dots: false,
         arrows: true,
+        fade: true,
         responsive: [
             {
                 breakpoint: 767, 
