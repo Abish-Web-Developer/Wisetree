@@ -40,49 +40,51 @@ body{
 .navigation-section label span{
     background: #104386;
     border-radius:10px;
-    height:5px;
-    margin: 5px 0;
+    height:4px;
+    margin: 4px 0;
     transition: .4s  cubic-bezier(0.68, -0.6, 0.32, 1.6);
 }
 .navigation-section span:nth-of-type(1){
-    width:90%;
+    width:75%;
     background-color: #104386;
 }
 .navigation-section span:nth-of-type(2){
-    width:60%;
+    width:50%;
     background-color: #104386;
 }
 .navigation-section span:nth-of-type(3){
-    width:90%;
+    width:75%;
 }
 .navigation-section input[type="checkbox"]{
     display:none;
 }
 .navigation-section input[type="checkbox"]:checked ~ span:nth-of-type(1){
-    width: 60%;
+    width: 50%;
     transform-origin:bottom;
-    transform: rotatez(45deg) translate(10px,9px);
+    transform: rotatez(45deg) translate(9px,7px);
 }
 .navigation-section input[type="checkbox"]:checked ~ span:nth-of-type(2){
-    
-    transform-origin:top;
-    transform:rotatez(-45deg)
-}
-.navigation-section input[type="checkbox"]:checked ~ span:nth-of-type(3){
     transform-origin:bottom;
     width:0%;
     transform: translate(30px,-11px) rotatez(45deg);
+    opacity: 0;
+}
+.navigation-section input[type="checkbox"]:checked ~ span:nth-of-type(3){
+    width: 50%;
+    transform-origin:top;
+    transform: rotatez(-45deg) translate(9px,-7px);
+    
 }
 .nav-list{
     position: absolute;
-    top: 90px;
+    top: 84px;
     z-index: 999;
-    right: -56%;
+    right: -79%;
     list-style-type: none;
     padding: 20px;
     background-color: #FCFFF9;
     height: 100vh;
-    width: 50%;
+    width: 75%;
 }
 .nav-list li{
     color: #104386;
@@ -101,7 +103,7 @@ body{
 
 @keyframes nav-in{
     0%{
-        right: -56%;
+        right: -79%;
     }
     100%{
         right: -2px;
@@ -113,13 +115,18 @@ body{
         right: -2px;
     }
     100%{
-        right: -56%;
+        right: -79%;
     }
 }
 
 @media screen and (min-width:993px) {
     .navigation-section{
         display: none;
+    }
+}
+@media screen and (max-width:992px) {
+    .nav-menu-logo{
+        width: 43%;   
     }
 }
 @media screen and (max-width:375px) {

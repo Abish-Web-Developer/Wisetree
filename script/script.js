@@ -181,7 +181,8 @@ $(document).ready(function(){
             {
                 breakpoint: 767, 
                 settings: {
-                    autoplay: true,        
+                    autoplay: true,
+                    fade: false,        
                 }
             },
         ]
