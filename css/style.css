@@ -669,6 +669,9 @@ body{
     .unique-section-sub-title{
         padding: 2rem 0;
     }
+    .unique-sec-learn-btn.animate div{
+    	right:1px;
+    }
 }
 @media screen and (max-width:575px) {
     .unique-section-title{
@@ -917,6 +920,7 @@ body{
 .looking-at-slider-section button{
     position: relative;
     bottom: -27rem;
+    z-index:-1px;
 }
 
 
