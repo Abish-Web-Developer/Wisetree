@@ -65,13 +65,13 @@ $(document).ready(function(){
                 $(".unique-sec-learn-btn").addClass('animate');
                 setTimeout(function(){
                     $('.learn-btn-dark-style').show();
-                },100)
+                },200)
             },
             function() { 
                 $(".unique-sec-learn-btn").removeClass('animate');
                 setTimeout(function(){
                     $('.learn-btn-dark-style').hide();
-                },100)
+                },200)
             }
         );
     }
@@ -88,13 +88,13 @@ $(document).ready(function(){
                 $(".who-we-are-section-learn-btn").addClass('animate');
                 setTimeout(function(){
                     $('.who-we-are-section-learn-btn-dark-style').show();
-                },100)
+                },200)
             },
             function() { 
                 $(".who-we-are-section-learn-btn").removeClass('animate');
                 setTimeout(function(){
                     $('.who-we-are-section-learn-btn-dark-style').hide();
-                },100)
+                },200)
             }
         );
     }
@@ -201,13 +201,13 @@ $(document).ready(function(){
                 $(".footer-sec-coonect-btn").addClass('animate');
                 setTimeout(function(){
                     $('.footer-sec-coonect-btn-dark-style').show();
-                },100)
+                },200)
             },
             function() { 
                 $(".footer-sec-coonect-btn").removeClass('animate');
                 setTimeout(function(){
                     $('.footer-sec-coonect-btn-dark-style').hide();
-                },100)
+                },200)
             }
         );
     }

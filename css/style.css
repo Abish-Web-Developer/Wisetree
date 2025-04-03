@@ -605,6 +605,7 @@ body{
 }
 .unique-sec-learn-btn{
     background: transparent;
+    padding: 0;
     border: none;
     display: flex;
     align-items: center;
@@ -636,40 +637,40 @@ body{
     justify-content: center;
     border: 1.5px solid transparent;
     transition: 0.2s ease-in-out;
-    /* position: relative; */
+    position: relative;
     z-index: 7;
-    /* animation: gradient-animation-out 0.5s; */
-    /* right: 36%; */
+    animation: gradient-animation-out 0.7s;
+    right: 97px;
 }
 
 @keyframes gradient-animation-in{
     0%{
-        right: 36%;
+        right: 97px;
     }
     100%{
-        right: 0%;
+        right: 12px;
     }
 }
 @keyframes gradient-animation-out{
     0%{
-        right: 0%;
+        right: 12px;
     }
     100%{
-        right: 36%;
+        right: 97px;
     }
 }
 .unique-sec-learn-btn.animate div{
-    /* animation: gradient-animation-in 0.5s; */
+    animation: gradient-animation-in 0.7s;
 }
 .unique-sec-learn-btn.animate div{
-    right: 13px;
+    right: 12px;
     position: relative;
 }
 .learn-btn-dark-style{
     position: relative;
     z-index: 5;
-    right: 6px;
-    /* display: none; */
+    right: 5px;
+    display: none;
 }
 .unique-btn-section{
     display: flex;
@@ -711,9 +712,6 @@ body{
     .unique-section-sub-title{
         padding: 2rem 0;
     }
-    .unique-sec-learn-btn.animate div{
-    	/* right:1px; */
-    }
 }
 @media screen and (max-width:575px) {
     .unique-section-title{
@@ -739,8 +737,11 @@ body{
         padding: 0;
     }
     .learn-btn-dark-style {
-        /* right: 53px; */
+        right: 6px;
     }
+    .unique-sec-learn-btn.animate div {
+        right: 13px;
+    }    
     .unique-learn-more-arrow{
         width: 17px;
     }
@@ -765,14 +766,15 @@ body{
 
 /* who we are section  */
 .who-we-are-section-learn-btn{
-    display: none !important;
     background: transparent;
+    padding: 0;
     border: none;
     display: flex;
     align-items: center;
     flex-direction: row;
-    gap: 10px;
     position: relative;
+    width: 297px;
+    
 }
 .who-we-are-section-learn-btn p{
     background-image: none;
@@ -803,19 +805,19 @@ body{
     transition: 0.2s ease-in-out;
     position: relative;
     z-index: 7;
-    animation: gradient-animation-out 0.5s;
-    right: 36%;
+    animation: gradient-animation-out 0.7s;
+    right: 97px;
 }
 .who-we-are-section-learn-btn.animate div{
-    animation: gradient-animation-in 0.5s;
+    animation: gradient-animation-in 0.7s;
 }
 .who-we-are-section-learn-btn.animate div{
-    right: 0%;
+    right: 12px;
 }
 .who-we-are-section-learn-btn-dark-style{
-    position: absolute;
+    position: relative;
     z-index: 5;
-    right: 68px;
+    right: 5px;
     display: none;
 }
 .unique-btn-section{
@@ -1097,18 +1099,15 @@ body{
         padding: 15px 22px;
     }
     .who-we-are-section-learn-btn div{
-        width: 53px !important;
-        height: 53px !important;
+        width: 60px !important;
+        height: 60px !important;
     }
     .who-we-are-section-learn-btn.animate div{
-        right: 1%;
+        right: 12px;
         padding: 0;
     }
     .who-we-are-section-learn-btn-dark-style{
-        right: 53px;
-    }
-    .who-we-are-section-learn-btn.animate div{
-        right: 1%;
+        right: 5px;
     }
     .looking-at-title {
         margin-bottom: -3.1rem;
@@ -1122,7 +1121,7 @@ body{
             right: 36%;
         }
         100%{
-            right: 1%;
+            right: 1px;
         }
     }
 }
@@ -1651,6 +1650,7 @@ body{
     display: flex;
     justify-content: space-between;
     align-items: center;
+    padding: 0 25px 0 20px !important;
 }
 .footer-sec-cnt-div .footer-sec-cnt-txt{
     color: #FCFFF9;
@@ -1660,12 +1660,13 @@ body{
 }
 .footer-sec-coonect-btn{
     background: transparent;
+    padding: 0;
     border: none;
     display: flex;
     align-items: center;
     flex-direction: row;
-    gap: 10px;
     position: relative;
+    max-width: 245px;
 }
 .footer-sec-coonect-btn p{
     background-image: none;
@@ -1696,19 +1697,19 @@ body{
     transition: 0.2s ease-in-out;
     position: relative;
     z-index: 7;
-    animation: gradient-animation-out 0.5s;
-    right: 36%;
+    animation: gradient-animation-out 0.7s;
+    right: 97px;;
 }
 .footer-sec-coonect-btn.animate div{
-    animation: gradient-animation-in 0.5s;
+    animation: gradient-animation-in 0.7s;
 }
 .footer-sec-coonect-btn.animate div{
-    right: 0%;
+    right: 12px;
 }
 .footer-sec-coonect-btn-dark-style{
-    position: absolute;
+    position: relative;
     z-index: 5;
-    right: 68px;
+    right: 5px;
     display: none;
 }
 .footer-logo{
@@ -1810,18 +1811,15 @@ body{
         padding: 15px 22px;
     }
     .footer-sec-coonect-btn div{
-        width: 53px !important;
-        height: 53px !important;
+        width: 60px !important;
+        height: 60px !important;
     }
     .footer-sec-coonect-btn.animate div{
-        right: 1%;
+        right: 12px;
         padding: 0;
     }
     .footer-sec-coonect-btn-dark-style{
-        right: 53px;
-    }
-    .footer-sec-coonect-btn.animate div{
-        right: 1%;
+        right: 5px;
     }
     @keyframes gradient-animation-in{
         0%{
