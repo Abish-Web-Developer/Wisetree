@@ -1589,6 +1589,9 @@ body{
         border-radius: 0 0 70px 70px;
         padding-bottom: 0;
     }
+    .blog-body-sec{
+        padding: 0 7px;
+    }
     .through-blog-col-sec{
         flex-direction: column;
         gap: 3rem;
@@ -1824,7 +1827,7 @@ body{
             right: 36%;
         }
         100%{
-            right: 1%;
+            right: 1px;
         }
     }
 }

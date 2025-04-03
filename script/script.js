@@ -18,7 +18,7 @@ $(document).ready(function(){
         if ($('#' + scroll_id).length) {
             $('html, body').animate({
                 scrollTop: $('#' + scroll_id).offset().top - 50
-            }, 1000);
+            }, 500);
             $('#check').prop('checked', false);
         } else {
             console.log("Target element not found");
@@ -221,7 +221,7 @@ $(document).ready(function(){
         if ($('#' + scroll_id).length) {
             $('html, body').animate({
                 scrollTop: $('#' + scroll_id).offset().top - 50
-            }, 1000);
+            }, 500);
         } else {
             console.log("Target element not found");
         }
