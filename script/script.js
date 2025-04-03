@@ -320,7 +320,13 @@ document.addEventListener("DOMContentLoaded", function () {
         updateSlides();
     });
 
-    window.addEventListener("resize", updateStates);
+    let lastWidth = window.innerWidth;
+    window.addEventListener("resize", function () {
+        if (window.innerWidth !== lastWidth) {
+            lastWidth = window.innerWidth;
+            updateStates();
+        }
+    });
 
     updateStates();
 
