@@ -228,18 +228,18 @@ $(document).ready(function(){
 
 
     // Scroll to top 
-    let scrollTrigger = 200; // Distance to trigger visibility (change if needed)
+    let scrollTrigger = 200;
 
     $(window).scroll(function () {
         if ($(this).scrollTop() > scrollTrigger) {
-            $(".scroll-top-top").fadeIn(); // Show button when scrolling down
+            $(".scroll-top-top").fadeIn();
         } else {
-            $(".scroll-top-top").fadeOut(); // Hide button when scrolling up
+            $(".scroll-top-top").fadeOut();
         }
     });
 
     $(".scroll-top-top").click(function () {
-        $("html, body").animate({ scrollTop: 0 }, 100); // Smooth scroll to top in 500ms
+        $("html, body").animate({ scrollTop: 0 }, 100);
     });
     
 
