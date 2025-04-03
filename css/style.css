@@ -609,7 +609,6 @@ body{
     display: flex;
     align-items: center;
     flex-direction: row;
-    gap: 10px;
     position: relative;
 }
 .unique-sec-learn-btn p{
@@ -637,10 +636,10 @@ body{
     justify-content: center;
     border: 1.5px solid transparent;
     transition: 0.2s ease-in-out;
-    position: relative;
+    /* position: relative; */
     z-index: 7;
-    animation: gradient-animation-out 0.5s;
-    right: 36%;
+    /* animation: gradient-animation-out 0.5s; */
+    /* right: 36%; */
 }
 
 @keyframes gradient-animation-in{
@@ -660,16 +659,17 @@ body{
     }
 }
 .unique-sec-learn-btn.animate div{
-    animation: gradient-animation-in 0.5s;
+    /* animation: gradient-animation-in 0.5s; */
 }
 .unique-sec-learn-btn.animate div{
-    right: 0%;
+    right: 13px;
+    position: relative;
 }
 .learn-btn-dark-style{
-    position: absolute;
+    position: relative;
     z-index: 5;
-    right: 68px;
-    display: none;
+    right: 6px;
+    /* display: none; */
 }
 .unique-btn-section{
     display: flex;
@@ -712,7 +712,7 @@ body{
         padding: 2rem 0;
     }
     .unique-sec-learn-btn.animate div{
-    	right:1px;
+    	/* right:1px; */
     }
 }
 @media screen and (max-width:575px) {
@@ -739,7 +739,7 @@ body{
         padding: 0;
     }
     .learn-btn-dark-style {
-        right: 53px;
+        /* right: 53px; */
     }
     .unique-learn-more-arrow{
         width: 17px;
