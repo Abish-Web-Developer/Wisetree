@@ -2,7 +2,7 @@
 $(document).ready(function(){
 
     // Navigation 
-    $('.navigation').click(function() {
+    $('.hamburger').click(function() {
         if ($('#check').prop('checked')) {
             $('.nav-list').addClass('nav-open').removeClass('nav-close');
         } else {
@@ -24,7 +24,6 @@ $(document).ready(function(){
             console.log("Target element not found");
         }
     });
-
 
     // Banner btn hover class adding 
     $('.bnr-con-logo-div').hover(
@@ -226,6 +225,22 @@ $(document).ready(function(){
             console.log("Target element not found");
         }
     });
+
+
+    // Scroll to top 
+    let scrollTrigger = 200; // Distance to trigger visibility (change if needed)
+
+    $(window).scroll(function () {
+        if ($(this).scrollTop() > scrollTrigger) {
+            $(".scroll-top-top").fadeIn(); // Show button when scrolling down
+        } else {
+            $(".scroll-top-top").fadeOut(); // Hide button when scrolling up
+        }
+    });
+
+    $(".scroll-top-top").click(function () {
+        $("html, body").animate({ scrollTop: 0 }, 100); // Smooth scroll to top in 500ms
+    });
     
 
 });
@@ -337,3 +352,6 @@ document.addEventListener("DOMContentLoaded", function () {
     }
     setInterval(triggerClick, 2500);
 });
+
+
+

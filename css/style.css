@@ -703,6 +703,9 @@ body{
         margin-top: 5rem;
         padding-bottom: 6rem;
     }
+    .unique-sec-learn-btn.animate div{
+        animation: none;
+    }
     .unique-sec-learn-btn p{
         padding: 20px 30px;
     }
@@ -1052,6 +1055,9 @@ body{
     }
     .looking-at-title {
         margin-bottom: -4rem;
+    }
+    .who-we-are-section-learn-btn.animate div{
+        animation: none;
     }
 }
 @media screen and (max-width:740px) {
@@ -1790,6 +1796,9 @@ body{
         font-size: 24px;
         line-height: 41px;
     }
+    .footer-sec-coonect-btn.animate div{
+        animation: none;
+    }
 }
 @media screen and (max-width:575px) {
     .footer-sec-cnt-div {
@@ -1832,3 +1841,27 @@ body{
 }
 
 
+/* Scroll to top btn  */
+.scroll-top-top{
+    display: none;
+    z-index: 9999;
+    transition: 0.2s ease;
+    background-color: white;
+    border: 2px solid black;
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    cursor: pointer;
+}
+.scroll-top-top div{
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.scroll-top-top img{
+    width: 17px;
+}
