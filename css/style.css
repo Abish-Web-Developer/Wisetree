@@ -149,7 +149,7 @@ body{
         transform: rotatez(45deg) translate(8px, 6px);
     }
     .nav-list{
-        top: 63px;
+        top: 58px;
         width: 75%;
     }
 }
@@ -1857,7 +1857,6 @@ body{
     cursor: pointer;
 }
 .scroll-top-top div{
-    background-color: white;
     height: 100%;
     display: flex;
     align-items: center;

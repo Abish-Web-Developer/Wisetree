@@ -2,7 +2,7 @@
 $(document).ready(function(){
 
     // Navigation 
-    $('.hamburger').click(function() {
+    $('.navigation').click(function() {
         if ($('#check').prop('checked')) {
             $('.nav-list').addClass('nav-open').removeClass('nav-close');
         } else {
