@@ -765,6 +765,7 @@ body{
 
 /* who we are section  */
 .who-we-are-section-learn-btn{
+    display: none;
     background: transparent;
     border: none;
     display: flex;
