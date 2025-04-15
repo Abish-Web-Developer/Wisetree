@@ -2,9 +2,10 @@
 .container-fluid{
     padding: 0 20px;
 }
-p{
+p, h1, h2, h3, h4, h5, h6{
     font-family: "Poppins", sans-serif;
     margin-bottom: 0;
+    font-weight: normal;
 }
 body{
     background-color: #FCFFF9;
@@ -1232,7 +1233,7 @@ body{
     background: url(../images/dot_grid.svg) no-repeat;
     background-size: cover;
 }
-.services-main-title p{
+.services-main-title h2{
     font-size: 150px;
     font-weight: 400;
     line-height: normal;
@@ -1404,7 +1405,7 @@ body{
     padding-bottom: 6rem;
 }
 @media screen and (max-width:767px) {
-    .services-main-title p {
+    .services-main-title h2 {
         font-size: 100px;
     }
     .serv-sub-title {
@@ -1441,7 +1442,7 @@ body{
         line-height: 63px;
         padding-bottom: 3rem;
     }
-    .services-main-title p {
+    .services-main-title h2 {
         font-size: 80px;
     }
 }
@@ -1468,7 +1469,7 @@ body{
         height: 263px;
         background-size: contain !important;
     }
-    .services-main-title p {
+    .services-main-title h2 {
         font-size: 58px;
     }
     .serv-card-main-div{
